@@ -1,0 +1,81 @@
+/* Apply some basic styles to the body and headings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Slightly lighter background */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Default text color */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Style the main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #e0e0e0; /* Softer border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px; /* Slightly rounded corners */
+}
+
+/* Style the Home button */
+.btn-home {
+    display: inline-block; /* Inline block for better alignment */
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Style the Home button on hover */
+.btn-home:hover {
+    background-color: #0056b3; /* Slightly darker color on hover */
+}
+
+/* Style the buttons for Generate, Encrypt, and Decrypt */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Style the buttons on hover */
+button:hover {
+    background-color: #0056b3; /* Slightly darker color on hover */
+}
+
+/* Style the textareas */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e0e0e0; /* Softer border color */
+    border-radius: 4px;
+    resize: none;
+}
+
+/* Style the pre elements for displaying key and result data */
+pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Softer border color */
+    border-radius: 4px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Wrap long lines */
+}

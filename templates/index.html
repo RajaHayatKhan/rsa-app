@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSA Encryption and Decryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>RSA Encryption and Decryption</h1>
+
+        <!-- Home Button -->
+        <a href="/" class="btn-home">RESET</a>
+
+        <!-- Generate RSA Key Pair -->
+        <h2>Generate RSA Key Pair</h2>
+        <form method="POST" action="/">
+            <input type="hidden" name="generate_keys" value="1">
+            <button type="submit" class="btn-generate">Generate Keys</button>
+        </form>
+        <pre>{{ private_key|default("") }}</pre>
+        <pre>{{ public_key|default("") }}</pre>
+
+        <!-- Encrypt -->
+        <h2>Encrypt</h2>
+        <form method="POST" action="/">
+            <input type="hidden" name="encrypt" value="1">
+            <textarea name="public_key" placeholder="Public Key" class="textarea" required></textarea><br>
+            <textarea name="plaintext" placeholder="Enter plaintext to encrypt" class="textarea" required></textarea><br>
+            <button type="submit" class="btn-encrypt">Encrypt</button>
+        </form>
+        <pre>{{ ciphertext|default("") }}</pre>
+
+        <!-- Decrypt -->
+        <h2>Decrypt</h2>
+        <form method="POST" action="/">
+            <input type="hidden" name="decrypt" value="1">
+            <textarea name="private_key" placeholder="Private Key" class="textarea" required></textarea><br>
+            <textarea name="ciphertext" placeholder="Enter ciphertext to decrypt" class="textarea" required></textarea><br>
+            <button type="submit" class="btn-decrypt">Decrypt</button>
+        </form>
+        <pre>{{ decrypted_text|default("") }}</pre>
+    </div>
+</body>
+</html>
